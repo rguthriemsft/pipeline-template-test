@@ -4,7 +4,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  imagename: terraform-azurerm-aks:$(build.buildId)
+  imagename: {{imagename}}
 
 steps:
 - script: docker build -f Dockerfile -t $(imageName) .
